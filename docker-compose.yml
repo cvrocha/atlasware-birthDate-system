@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: db_mysql
+    ports:
+      - '3376:3306'
+    volumes:
+      - /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gobarber
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: root
