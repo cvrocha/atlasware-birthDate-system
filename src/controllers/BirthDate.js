@@ -9,7 +9,7 @@ const BirthDateController = {
     await Employee.findAll({
       where: {
         birthDate: {
-          $gte: moment().toDate(),
+          $eq: moment().toDate(),
         },
       },
     }).then((data) => {
